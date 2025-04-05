@@ -1,33 +1,34 @@
 class Laptop {
-    String brand;
-    String model;
-    int ramSize;
-    int storageSize;
+   String model;
+   int price;
 
-    public Laptop(String brand, String model, int ramSize, int storageSize) {
-        this.brand = brand;
+    public Laptop(String model , int price ) {
         this.model = model;
-        this.ramSize = ramSize;
-        this.storageSize = storageSize;
+        this.price = price;
+    }
+   public String toString() {
+        return "Model: " + model + ", Price: " + price;
+    }
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Laptop laptop = (Laptop) obj;
+        return price == laptop.price && model.equals(laptop.model);
+    }
+    public int hashCode() {
+        return 31 * model.hashCode() + price;
     }
 
-    public void displayInfo() {
-        System.out.println("Brand: " + brand);
-        System.out.println("Model: " + model);
-        System.out.println("RAM Size: " + ramSize + "GB");
-        System.out.println("Storage Size: " + storageSize + "GB");
-    }
-
-    
 }
 public class ObjectClas {
     public static void main(String[] args) {
-        Laptop laptop1 = new Laptop("Dell", "XPS 13", 16, 512);
-        Laptop laptop2 = new Laptop("Apple", "MacBook Pro", 32, 1024);
+        Laptop l1 = new Laptop("Dell", 50000);
+        Laptop l2 = new Laptop("HP", 60000);
+        Laptop l3 = new Laptop("Lenovo", 70000);
 
-        laptop1.displayInfo();
-        System.out.println();
-        laptop2.displayInfo();
+        System.out.println(l1);
+        System.out.println(l2);
+        System.out.println(l3);
     }
     
 }
