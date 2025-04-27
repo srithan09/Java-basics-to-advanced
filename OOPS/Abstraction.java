@@ -19,6 +19,13 @@ class Cat extends Animal {
     }
 }
 
+class Cow extends Animal {
+    @Override
+    public void sound() {
+        System.out.println("Cow moos");
+    }
+}
+
 public class Abstraction {
     public static void main(String[] args) {
         Animal dog = new Dog();
@@ -28,5 +35,9 @@ public class Abstraction {
         Animal cat = new Cat();
         cat.sound(); // Output: Cat meows
         cat.sleeping(); // Output: Animal is sleeping
+
+        Animal cow = new Cow();
+        cow.sound(); // Output: Cow moos
+        cow.sleeping(); // Output: Animal is sleeping
     }
 }
