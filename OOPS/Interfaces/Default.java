@@ -2,6 +2,7 @@ interface Vehicle {
     void start();
     void stop();
     default void honk() {
+        this.start(); // calling another method from default method
         System.out.println("Vehicle honks!");
     }
 }
