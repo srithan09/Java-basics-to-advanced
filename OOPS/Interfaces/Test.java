@@ -5,6 +5,9 @@ interface Animal {
     public static void info() {
         System.out.println("This is an animal interface.");
     }
+    default void sound() {
+        System.out.println("Animal makes sound.");
+    }
 }
 
 class Dog implements Animal {
@@ -32,9 +35,11 @@ public class Test {
         dog.sleep();
         Animal.info();
         System.out.println("Dog's age: " + Animal.age);
+        dog.sound(); // calling default method
 
         Animal cat = new Cat();
         cat.eat();
         cat.sleep();
+        cat.sound(); // calling default method
     }
 }
