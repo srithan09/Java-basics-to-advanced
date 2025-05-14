@@ -10,6 +10,7 @@ public class ArrayListDemo {
         list.add(20);
         list.add(30);
 
+        list.add(1,40);
         // Print the ArrayList
         System.out.println("ArrayList: " + list);
 
