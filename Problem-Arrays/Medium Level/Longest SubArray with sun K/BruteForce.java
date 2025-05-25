@@ -1,6 +1,9 @@
 
 public class BruteForce {
     public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 1 ,1,1,1,1,4,2,3};
+        int k = 3;
+        System.out.println("Longest subarray with sum " + k + ": " + longestSubarray(arr, k));
         
     }
     static int longestSubarray(int[] arr, int k) {
