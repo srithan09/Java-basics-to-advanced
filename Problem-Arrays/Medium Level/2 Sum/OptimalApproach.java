@@ -26,7 +26,7 @@ public class OptimalApproach {
 
 
     public static void main(String[] args) {
-         int[] arr = {2,6,5,8,11};
+        int[] arr = {2,6,5,8,11};
         int target = 14;
         List<Integer> result = new ArrayList<>();
         result = TwoSumOptimal(arr, target);
