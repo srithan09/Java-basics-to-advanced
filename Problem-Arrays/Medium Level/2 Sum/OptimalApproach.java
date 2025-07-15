@@ -4,23 +4,20 @@ import java.util.List;
 
 public class OptimalApproach {
 
- public static List<Integer> TwoSumOptimal(int[] arr, int k) {
+public static List<Integer> TwoSumOptimal(int[] arr, int k) {
     List<Integer> res = new ArrayList<>();
     HashMap<Integer, Integer> map = new HashMap<>();
 
     for (int i = 0; i < arr.length; i++) {
         int a = arr[i];
         int more = k - a;
-
         if (map.containsKey(more)) {
             res.add(map.get(more));
             res.add(i);
             return res;
         }
-
         map.put(a, i);
     }
-
     return res;
 }
 
