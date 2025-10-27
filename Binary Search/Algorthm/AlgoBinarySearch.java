@@ -1,6 +1,7 @@
 public class AlgoBinarySearch {
     public static void BinarySearch(int[] arr,int target)
     {
+        Arrays.sort(arr);
         int n = arr.length;
         int start =0;
         int end = n-1;
@@ -23,6 +24,6 @@ public class AlgoBinarySearch {
     }
     public static void main(String[] args) {
         int[] arr = {30,70,21,10,78};
-        
+        int target = 21;
     }
 }

@@ -2,7 +2,6 @@
 public class CycleSort {
     public static void AlgoCyclicSor(int[] arr)
     {
-        //the following array will be given from 1 to n and then we need to sort according to the index
         int i=0;
         while(i<arr.length)
         {
@@ -28,5 +27,6 @@ public class CycleSort {
         for (int i : arr) {
             System.out.println(i);
         }
+        
     }
 }
