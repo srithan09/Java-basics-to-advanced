@@ -21,7 +21,9 @@ public class Solution {
                 start = mid+1;
             }
         }
-    }public static int lastOccurance(int[] nums, int target)
+        return ans;
+    }
+    public static int lastOccurance(int[] nums, int target)
     {
         int start =0;
         int end = nums.length;
